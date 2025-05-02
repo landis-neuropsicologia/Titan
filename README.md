@@ -56,7 +56,7 @@ O código implementa e demonstra:
 ### Clone o repositório
 
 ```markdown
-https://lead7consultoria@dev.azure.com/lead7consultoria/Titan/_git/Titan
+https://github.com/landis-neuropsicologia/Titan
 ```
 
 ### Configure as strings de conexão em appsettings.json
