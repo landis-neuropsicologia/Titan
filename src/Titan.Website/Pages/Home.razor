@@ -1,0 +1,299 @@
+﻿@page "/"
+
+@inject ProfissionalService ProfissionalService
+@inject ServicoService ServicoService
+@inject DepoimentoService DepoimentoService
+
+<PageTitle>Viviane Balero Landis - Neuropsicologia</PageTitle>
+
+@if (working)
+{
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                XXXXXX
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <!-- Banner Hero -->
+    <section class="hero-banner">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/banner1.jpg" class="d-block w-100" alt="Avaliação Neuropsicológica">
+                    <div class="carousel-caption">
+                        <h1>Excelência em Neuropsicologia</h1>
+                        <p>Avaliação e reabilitação neuropsicológica com profissionais altamente qualificados</p>
+                        <a href="agendar" class="btn btn-primary btn-lg">Agendar Consulta</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/banner2.jpg" class="d-block w-100" alt="Reabilitação Neuropsicológica">
+                    <div class="carousel-caption">
+                        <h1>Reabilitação Neuropsicológica</h1>
+                        <p>Programas personalizados para potencializar as capacidades cognitivas</p>
+                        <a href="servicos" class="btn btn-primary btn-lg">Conheça Nossos Serviços</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/banner3.jpg" class="d-block w-100" alt="Neuropsicologia Infantil">
+                    <div class="carousel-caption">
+                        <h1>Neuropsicologia Infantil</h1>
+                        <p>Avaliação e intervenção especializada para crianças e adolescentes</p>
+                        <a href="contato" class="btn btn-primary btn-lg">Entre em Contato</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Próximo</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- Sobre Nós - Resumo -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="images/sobre-nos.jpg" alt="Viviane Balero Landis - Neuropsicologia" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Quem Somos</h2>
+                    <p>Somos um consultório especializado em avaliação e reabilitação neuropsicológica, oferecendo atendimento para crianças, adolescentes, adultos e idosos.</p>
+                    <p>Nossa equipe é composta por profissionais com ampla formação e experiência na área da neuropsicologia, comprometidos em oferecer um atendimento humanizado e baseado em evidências científicas.</p>
+                    <p>Nosso objetivo é proporcionar um ambiente acolhedor e profissional, onde cada paciente recebe um atendimento personalizado de acordo com suas necessidades específicas.</p>
+                    <a href="sobre" class="btn btn-outline-primary">Saiba Mais</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nossos Serviços -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nossos Serviços</h2>
+                <p class="section-subtitle">Conheça nossos serviços</p>
+            </div>
+
+            <div class="row">
+                @if (servicos == null)
+                {
+                    <div class="col-12 text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Carregando...</span>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    @foreach (var servico in servicos.Take(3))
+                    {
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="card service-card h-100">
+                                <img src="@servico.Imagem" class="card-img-top" alt="@servico.Nome">
+                                <div class="card-body">
+                                    <h5 class="card-title">@servico.Nome</h5>
+                                    <p class="card-text">@servico.Descricao</p>
+                                </div>
+                                <div class="card-footer bg-white border-0">
+                                    <a href="servicos" class="btn btn-link p-0">Saiba mais <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="servicos" class="btn btn-primary">Ver Todos os Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipe -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Nossa Equipe</h2>
+                <p class="section-subtitle">Conheça os profissionais da Viviane Balero Landis - Neuropsicologia</p>
+            </div>
+
+            <div class="row">
+                @if (profissionais == null)
+                {
+                    <div class="col-12 text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Carregando...</span>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    @foreach (var profissional in profissionais)
+                    {
+                        <div class="col-lg-6 mb-4">
+                            <div class="card team-card h-100">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="@profissional.Imagem" class="img-fluid rounded-start h-100" alt="@profissional.Nome">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">@profissional.Nome</h5>
+                                            <p class="card-subtitle text-primary">@profissional.Especialidade</p>
+                                            <p class="card-text mt-3">@profissional.Descricao</p>
+                                            <a href="profissionais" class="btn btn-link p-0">Ver perfil completo <i class="fas fa-arrow-right ms-1"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="profissionais" class="btn btn-primary">Conheça Nossa Equipe</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Depoimentos -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Depoimentos</h2>
+                <p class="section-subtitle">O que nossos pacientes dizem sobre nós</p>
+            </div>
+
+            <div class="row">
+                @if (depoimentos == null)
+                {
+                    <div class="col-12 text-center">
+                        <div class="spinner-border text-primary" role="status">
+                            <span class="visually-hidden">Carregando...</span>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    @foreach (var depoimento in depoimentos.Take(4))
+                    {
+                        <div class="col-lg-6 mb-4">
+                            <div class="card testimonial-card h-100">
+                                <div class="card-body">
+                                    <div class="testimonial-stars mb-3">
+                                        @for (int i = 0; i < depoimento.Avaliacao; i++)
+                                        {
+                                            <i class="fas fa-star text-warning"></i>
+                                        }
+                                        @for (int i = depoimento.Avaliacao; i < 5; i++)
+                                        {
+                                            <i class="far fa-star text-warning"></i>
+                                        }
+                                    </div>
+                                    <p class="card-text testimonial-text">@depoimento.Texto</p>
+                                    <div class="testimonial-author">
+                                        <h6 class="mb-0">@depoimento.Nome</h6>
+                                        <small class="text-muted">@depoimento.Data</small>
+                                        @if (!string.IsNullOrEmpty(depoimento.Cargo))
+                                        {
+                                            <small class="d-block text-muted">@depoimento.Cargo</small>
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA - Agende sua Consulta -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 mb-4 mb-lg-0">
+                    <h2>Agende sua consulta ou avaliação</h2>
+                    <p class="lead mb-0">Entre em contato conosco para agendar uma consulta ou solicitar mais informações sobre nossos serviços.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="agendar" class="btn btn-light btn-lg">Agendar Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="section-title">Últimas do Blog</h2>
+                <p class="section-subtitle">Artigos e informações sobre neuropsicologia</p>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="card blog-card h-100">
+                        <img src="images/blog1.jpg" class="card-img-top" alt="Blog Post">
+                        <div class="card-body">
+                            <h5 class="card-title">A importância da avaliação neuropsicológica no diagnóstico do TDAH</h5>
+                            <p class="card-text">Entenda como a avaliação neuropsicológica pode auxiliar no diagnóstico e tratamento do TDAH.</p>
+                            <div class="d-flex justify-content-between">
+                                <small class="text-muted">Por Dra. Ana Landis</small>
+                                <small class="text-muted">15/04/2025</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="blog/1" class="btn btn-link p-0">Ler artigo completo <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="card blog-card h-100">
+                        <img src="images/blog2.jpg" class="card-img-top" alt="Blog Post">
+                        <div class="card-body">
+                            <h5 class="card-title">Reabilitação neuropsicológica após AVC</h5>
+                            <p class="card-text">Conheça as técnicas e benefícios da reabilitação neuropsicológica em pacientes que sofreram AVC.</p>
+                            <div class="d-flex justify-content-between">
+                                <small class="text-muted">Por Dr. Rafael Martins</small>
+                                <small class="text-muted">02/04/2025</small>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="blog/2" class="btn btn-link p-0">Ler artigo completo <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-4">
+                <a href="blog" class="btn btn-primary">Visitar o Blog</a>
+            </div>
+        </div>
+    </section>
+}
+
+@code {
+    private List<Profissional>? profissionais;
+    private List<Servico>? servicos;
+    private List<Depoimento>? depoimentos;
+    private bool working = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        profissionais = await ProfissionalService.GetProfissionaisAsync();
+        servicos = await ServicoService.GetServicosAsync();
+        depoimentos = await DepoimentoService.GetDepoimentosAsync();
+    }
+}

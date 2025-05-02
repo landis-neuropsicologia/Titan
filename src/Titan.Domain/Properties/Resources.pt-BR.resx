@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="UserStatus_Active" xml:space="preserve">
+    <value>Ativo</value>
+  </data>
+  <data name="UserStatus_Deleted" xml:space="preserve">
+    <value>Excluído</value>
+  </data>
+  <data name="UserStatus_Expired" xml:space="preserve">
+    <value>Expirado</value>
+  </data>
+  <data name="UserStatus_ExpiresAt" xml:space="preserve">
+    <value>Expira em</value>
+  </data>
+  <data name="UserStatus_Inactive" xml:space="preserve">
+    <value>Inativo</value>
+  </data>
+  <data name="UserStatus_Locked" xml:space="preserve">
+    <value>Bloqueado</value>
+  </data>
+  <data name="UserStatus_Pending" xml:space="preserve">
+    <value>Pendente</value>
+  </data>
+  <data name="UserStatus_Suspended" xml:space="preserve">
+    <value>Suspenso</value>
+  </data>
+  <data name="UserStatus_WithExpiration" xml:space="preserve">
+    <value>Data de Expiração precisa ser maior que Data Atual.</value>
+  </data>
+  <data name="UserStatus_WithReason" xml:space="preserve">
+    <value>O campo Reason não pode ser vazio.</value>
+  </data>
+  <data name="UserBase_EmailEmpty" xml:space="preserve">
+    <value>O campo Email não pode ser vazio.</value>
+  </data>
+  <data name="UserBase_RoleEmpty" xml:space="preserve">
+    <value>O campo Role não pode ser vazio.</value>
+  </data>
+  <data name="UserStatus_CreateDeleted" xml:space="preserve">
+    <value>É necessário informar o 'reason'.</value>
+  </data>
+  <data name="UserStatus_CreateLocked" xml:space="preserve">
+    <value>É necessário informar o 'reason'.</value>
+  </data>
+  <data name="UserStatus_CreateSuspended" xml:space="preserve">
+    <value>É necessário informar o 'reason'.</value>
+  </data>
+  <data name="UserStatus_Unknown" xml:space="preserve">
+    <value>Status Desconhecido:</value>
+  </data>
+  <data name="SocialMediaProvider_Google" xml:space="preserve">
+    <value>Google</value>
+  </data>
+  <data name="SocialMediaProvider_Microsoft" xml:space="preserve">
+    <value>Microsoft</value>
+  </data>
+  <data name="SocialMediaProvider_UnsupportedProvider" xml:space="preserve">
+    <value>Provedor de Mídia Social não suportado:</value>
+  </data>
+  <data name="SocialMediaProvider_Facebook" xml:space="preserve">
+    <value>Facebook</value>
+  </data>
+  <data name="PhoneNumber_Empty" xml:space="preserve">
+    <value>Telefone não pode ser vazio.</value>
+  </data>
+  <data name="PhoneNumber_InternationalNumberInvalid" xml:space="preserve">
+    <value>Telefone com formato internacional inválido.</value>
+  </data>
+  <data name="PhoneNumber_NationalNumberInvalid" xml:space="preserve">
+    <value>Telefone com formato inválido.</value>
+  </data>
+  <data name="PhoneNumber_ToE164Format" xml:space="preserve">
+    <value>Não é possível converter para o formato E.164 sem o código do país.</value>
+  </data>
+  <data name="PasswordHash_Empty" xml:space="preserve">
+    <value>A Senha não pode ser vazia.</value>
+  </data>
+  <data name="PasswordHash_HashEmpty" xml:space="preserve">
+    <value>O Hash não pode ser vazio.</value>
+  </data>
+  <data name="Name_Empty" xml:space="preserve">
+    <value>O Nome não pode ser vazio.</value>
+  </data>
+  <data name="Name_TooLong" xml:space="preserve">
+    <value>O Nome é muito grande.</value>
+  </data>
+  <data name="JobTitle_Empty" xml:space="preserve">
+    <value>Cargo não pode ser vazio.</value>
+  </data>
+  <data name="JobTitle_LevelNegative" xml:space="preserve">
+    <value>Nível não pode ser negativo.</value>
+  </data>
+  <data name="JobTitle_AbbreviationNegative" xml:space="preserve">
+    <value>Abreviação não pode ser vazio.</value>
+  </data>
+  <data name="JobTitle_DepartmentEmpty" xml:space="preserve">
+    <value>Departamento não pode ser vazio.</value>
+  </data>
+  <data name="JobTitle_UnknownAbbreviation" xml:space="preserve">
+    <value>Abreviação desconhecida.</value>
+  </data>
+  <data name="EmployeeId_Empty" xml:space="preserve">
+    <value>Employee ID não pode ser vazio.</value>
+  </data>
+  <data name="EmployeeId_TooLong" xml:space="preserve">
+    <value>Employee ID é muito grande.</value>
+  </data>
+  <data name="Email_Empty" xml:space="preserve">
+    <value>Email não pode ser vazio.</value>
+  </data>
+  <data name="Email_TooLong" xml:space="preserve">
+    <value>Email é muito grande.</value>
+  </data>
+  <data name="Email_Invalid" xml:space="preserve">
+    <value>Email inválido.</value>
+  </data>
+  <data name="DomainName_TooLong" xml:space="preserve">
+    <value>Nome do Dominio é muito grande.</value>
+  </data>
+  <data name="DomainName_EmptyPeriod" xml:space="preserve">
+    <value>Nome do Dominio precisa ter ao menos um período.</value>
+  </data>
+  <data name="DateRange_GreaterThan" xml:space="preserve">
+    <value>Data Final precisa ser maior ou igual a Data Inicial.</value>
+  </data>
+  <data name="DateRange_Negative" xml:space="preserve">
+    <value>Duração não pode ser negativo.</value>
+  </data>
+  <data name="DateRange_DaysNotNegative" xml:space="preserve">
+    <value>Número de Dias não pode ser negativo.</value>
+  </data>
+  <data name="DateRange_Intersect" xml:space="preserve">
+    <value>Não é possível cruzar intervalos de datas não sobrepostos.</value>
+  </data>
+  <data name="DateRange_Union" xml:space="preserve">
+    <value>Não é possível unir intervalos de datas não sobrepostos.</value>
+  </data>
+  <data name="DateRange_Split" xml:space="preserve">
+    <value>O intervalo deve ser positivo.</value>
+  </data>
+  <data name="Currency_Empty" xml:space="preserve">
+    <value>Código da Moeda não pode ser vazio.</value>
+  </data>
+  <data name="Currency_Add" xml:space="preserve">
+    <value>Não é possível adicionar moedas com códigos diferentes:</value>
+  </data>
+  <data name="Currency_Divide" xml:space="preserve">
+    <value>Divisão por zero.</value>
+  </data>
+  <data name="Currency_Subtract" xml:space="preserve">
+    <value>Não é possível subtrair moedas com códigos diferentes:</value>
+  </data>
+  <data name="Currency_And" xml:space="preserve">
+    <value>e</value>
+  </data>
+  <data name="Currency_ValueEmpty" xml:space="preserve">
+    <value>Valor não pode ser vazio.</value>
+  </data>
+  <data name="Currency_InvalidValue" xml:space="preserve">
+    <value>Valor monetário inválido.</value>
+  </data>
+  <data name="CompositeRoleName_RoleEmpty" xml:space="preserve">
+    <value>Pelo menos uma role deve ser fornecida.</value>
+  </data>
+  <data name="CompositeRoleName_RoleName" xml:space="preserve">
+    <value>O Nome da Role não pode ser vazio.</value>
+  </data>
+  <data name="CompositeRoleName_Remove" xml:space="preserve">
+    <value>Não é possível remover a última role de uma role composta.</value>
+  </data>
+  <data name="CompositeRoleName_CompositeRoleEmpty" xml:space="preserve">
+    <value>O nome da role composta não pode estar vazio.</value>
+  </data>
+  <data name="CompositeRoleName_Intersect" xml:space="preserve">
+    <value>A intersecção de roles resultou em um conjunto vazio.</value>
+  </data>
+  <data name="Address_StreetEmpty" xml:space="preserve">
+    <value>Rua não pode ser vazio.</value>
+  </data>
+  <data name="Address_ZipEmpty" xml:space="preserve">
+    <value>Código Postal não pode ser vazio.</value>
+  </data>
+  <data name="Address_StateEmpty" xml:space="preserve">
+    <value>Estado não pode ser vazio.</value>
+  </data>
+  <data name="Address_CityEmpty" xml:space="preserve">
+    <value>Cidade não pode ser vazio.</value>
+  </data>
+  <data name="Address_CountryEmpty" xml:space="preserve">
+    <value>País não pode ser vazio.</value>
+  </data>
+  <data name="Address_NumberEmpty" xml:space="preserve">
+    <value>Número não pode ser vazio.</value>
+  </data>
+  <data name="ActivationKey_Empty" xml:space="preserve">
+    <value>Chave de Ativação não pode ser vazia.</value>
+  </data>
+  <data name="TaxNumber_Empty" xml:space="preserve">
+    <value>O CPF/CNPJ não pode ser vazio.</value>
+  </data>
+  <data name="Role_Empty" xml:space="preserve">
+    <value>O Nome da Role não pode ser vazio.</value>
+  </data>
+  <data name="Company_Empty" xml:space="preserve">
+    <value>O Nome da Empresa não pode ser vazio.</value>
+  </data>
+  <data name="CompanyUser_Empty" xml:space="preserve">
+    <value>O Nome da Empresa não pode ser vazio.</value>
+  </data>
+  <data name="ActivityLog_ActionEmpty" xml:space="preserve">
+    <value>Acão não pode ser vazio.</value>
+  </data>
+  <data name="ActivityLog_UserIdEmpty" xml:space="preserve">
+    <value>User ID não pode ser vazio.</value>
+  </data>
+  <data name="StaffUser_NameEmpty" xml:space="preserve">
+    <value>Nome não pode ser vazio.</value>
+  </data>
+  <data name="PersonUser_NameEmpty" xml:space="preserve">
+    <value>Nome não pode ser vazio.</value>
+  </data>
+  <data name="StaffUser_EmployeeIdEmpty" xml:space="preserve">
+    <value>ID do Colaborador não pode ser vazio.</value>
+  </data>
+</root>

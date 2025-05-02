@@ -1,0 +1,102 @@
+﻿@inherits LayoutComponentBase
+
+<div class="main-layout">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="images/logo.png" alt="Viviane Balero Landis - Neuropsicologia" height="250">
+                </a>
+                <div class="container">
+                    Estamos trabalhando na melhoria deste website.
+                </div>
+                <!-- 
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">Home</NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="sobre">Quem Somos</NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="servicos">Serviços</NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="profissionais">Profissionais</NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="blog">Blog</NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link" href="contato">Contato</NavLink>
+                        </li>
+                        <li class="nav-item">
+                            <NavLink class="nav-link btn btn-primary text-white px-4 ms-2" href="agendar">Agendar</NavLink>
+                        </li>
+                    </ul>
+                </div>
+                -->
+            </div>
+        </nav>
+    </header>
+
+    <main class="content">
+        @Body
+    </main>
+
+    <footer>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Viviane Balero Landis - Neuropsicologia</h5>
+                    <p>Consultório especializado em avaliação neuropsicológica, reabilitação cognitiva e acompanhamento de transtornos do neurodesenvolvimento.</p>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5>Contato</h5>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Rua das Camélias, 326 - Sala 112 <br /> Conj. Hab. Inocente Vila Nova Júnior <br /> Maringá - PR</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(44) 9 9176-1946</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contato@landis-neuropsicologia.com.br</span>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Horário de Atendimento</h5>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Segunda a Sexta: 9h às 18h</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Sábado: 9h às 12h</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Domingo: Fechado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyright py-3 text-center">
+            <div class="container">
+                <p class="mb-0">&copy; @DateTime.Now.Year Grupo Reliance. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</div>
