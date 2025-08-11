@@ -1,0 +1,49 @@
+name: Trigger auto deployment for agendavbl-web
+
+# When this action will be executed
+on:
+  # Automatically trigger it when detected changes in repo
+  push:
+    branches: 
+      [ main ]
+    paths:
+    - '**'
+    - '.github/workflows/agendavbl-web-AutoDeployTrigger-13b43179-5471-412e-855a-620d75dc9ccf.yml'
+
+  # Allow manual trigger 
+  workflow_dispatch:      
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    permissions: 
+      id-token: write #This is required for requesting the OIDC JWT Token
+      contents: read #Required when GH token is used to authenticate with private repo
+
+    steps:
+      - name: Checkout to the branch
+        uses: actions/checkout@v2
+
+      - name: Azure Login
+        uses: azure/login@v2
+        with:
+          client-id: ${{ secrets.AGENDAVBLWEB_AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AGENDAVBLWEB_AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AGENDAVBLWEB_AZURE_SUBSCRIPTION_ID }}
+
+      - name: Build and push container image to registry
+        uses: azure/container-apps-deploy-action@v2
+        with:
+          appSourcePath: ${{ github.workspace }}
+          _dockerfilePathKey_: _dockerfilePath_
+          _targetLabelKey_: _targetLabel_
+          registryUrl: agendavblregistry.azurecr.io
+          registryUsername: ${{ secrets.AGENDAVBLWEB_REGISTRY_USERNAME }}
+          registryPassword: ${{ secrets.AGENDAVBLWEB_REGISTRY_PASSWORD }}
+          containerAppName: agendavbl-web
+          resourceGroup: Titan-Resources
+          imageToBuild: agendavblregistry.azurecr.io/agendavbl-web:${{ github.sha }}
+          _buildArgumentsKey_: |
+            _buildArgumentsValues_
+
+
